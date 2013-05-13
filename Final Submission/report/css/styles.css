@@ -1,0 +1,111 @@
+#wrapper {
+	width: 915px;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+	padding: 30px
+	padding-bottom: 60px;
+}
+
+#header {
+	border-bottom: 2px solid black;
+}
+
+#header > div > img {
+	width: 160px;
+	height: auto;
+}
+
+h1 {
+	font-size: 35;
+}
+
+h2 {
+	font-size: 25;
+}
+
+#panel1 {
+	float: left;
+	border-bottom: 1px solid black;
+}
+
+#panel1-images {
+	width: 915px;
+}
+
+#panel2 {
+	float: left;
+}
+
+#buttons {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.clear-both {
+	clear: both;
+}
+
+#canvas {
+	width: 150px;
+	height: 150px;
+	border: solid gray 1px;
+  margin: 10px;
+  float: left;
+}
+
+#examples {
+	float: left;
+	margin: 10px;
+}
+
+.pixel {
+	width: 8px;
+  height: 8px;
+  background-color: #FFF;
+  border: solid #CCC 1px;
+  float: left;
+}
+
+.panel {
+	width: 150px;
+  height: 150px;
+  border: solid gray 1px;
+  margin: 0px;
+  float: left;
+}
+
+.pixel-eg {
+	width: 2px;
+  height: 2px;
+  background-color: #FFF;
+  border: solid #CCC 1px;
+  float: left;
+}
+
+.panel-eg {
+	width: 60px;
+  height: 60px;
+  border: solid gray 1px;
+  margin: 0px;
+  float: left;
+}
+
+.panel-hover {
+	border: solid black 1px;
+}
+
+#panel1-output, #panel2-output {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#test-result-b, #test-result-g {
+	font-weight: bold;
+}

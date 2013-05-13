@@ -1,0 +1,2 @@
+﻿title: Neural Networks for Handwriting Recognition
+seas-usernames: lisayao, shen, todd, lhuremaclaurin

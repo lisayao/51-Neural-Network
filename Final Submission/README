@@ -1,0 +1,53 @@
+COMMAND LINE
+************
+
+Direct yourself to the folder code.  Then write the following into the command line:
+
+python neural_net_main.py -e 10 -r 0.3 -t hidden -m test -i 0.1 -n 5
+
+Other options include:
+
+python neural_net_main.py -e 10 -r 0.3 -t hidden -m train
+
+python neural_net_main.py -e 10 -r 0.3 -t hidden -m run
+
+See the end of this document for a lot more detailed information on the arguments!
+
+
+USER INTERFACE
+**************
+
+In the terminal, start the local python server by typing the following into the command line:
+
+python webserver.py
+
+
+This will cause index.html to pop up in your default browser.  You will then treated with an interactive user interface with two components:
+
+- a grayscale image recognition interface with sample images 
+- a black and white input interface that allows the user to draw his or her own digits for the neural network to recognize
+
+Either option will send an image to the server for recognition.
+
+COMMAND LINE DETAILS
+********************
+
+Our program takes in 4 to 6 command line arguments:
+
+-e: Number of Epochs. The number of full cycles of learning that the network should go through.
+
+-r: Learning Rate. The learning rate determines how strongly the network should adjust its weights between each epoch based on the errors at output. A lower learning rate means that the network will self-correct more slowly but more steadily toward its optimal performance level before starting to decline due to overfitting, while a higher learning rate will make the network reach its optimal performance faster, but be much more unstable in the process from self-correcting too strongly on each run. We’ve also found that higher learning rates don’t reach as high of a performance level.
+
+-t: Network Type. The type of network the program should run: either a fully-connected, multi-layer perceptron made up of an input layer, a hidden layer and an output layer, or a  multi-layer convolutional neural network containing an additional 2 convolutional layers.
+
+-m: Network Mode. The program can be run in 3 different modes.“Train” runs the neural network through the full cycle of Forward and Backward propagations for a given learning rate and number of epochs. When done, the final adjusted weights are written to file (weights.txt) so that they can be used subsequently to run the network at this final performance level without having to train it again. 
+
+“Run” loads the weights from a previously saved weights.txt file and runs the NN at the level of performance dictated by the adjusted weights passed to it.
+“Test” trains the network a number of times specified by the user for -e number of epochs, re-initializing the weights randomly every time, and takes a required 2 additional command line arguments:
+
+-i: Specifies the increment by which the learning rate should increase between each run of Train.
+
+-n: Specifies the number of times Train should be called     
+This allows to automate testing and store data for different run lengths and learning rates, and is what we used to gather our data.               
+
+“Train” and “Test” modes both append to a performance log (performance_log.txt) in the format: Epoch #, Learning Rate, Training Performance, Validation Performance. The information is comma separated in a CSV style so that it can be graphed and manipulated easily for data analysis.

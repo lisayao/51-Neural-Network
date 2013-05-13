@@ -1,0 +1,53 @@
+<title>Digit Recognition</title>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">	
+	<link href="css/styles.css" rel="stylesheet" media="screen">	
+	<script src="draw.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div class="float-right">
+			<img src="./img/website_logo.png">
+		</div>
+		<h1>Neural Networks for Handwritten Digit Recognition</h1>
+	</div>
+
+	<div id="panel1">
+		<h2>Grayscale Inputs</h2>
+		<p>Click on a sample grayscale input from the MNIST to send to the server for recognition.</p>
+		<div id="panel1-images">
+		</div>
+		<h2 id="panel1-output">Server Output: <span id="test-result-g">0</span></h2>
+	</div>
+
+	<div id="panel2">
+		<h2>Drawable Black and White Input</h2>
+		<p>Draw a digit in black and white to send to the server for recognition. <i>Note</i>: Performance may be lower as the training dataset was converted from grayscale MNIST data to be black and white. Use the examples to guide your drawing for more accurate inputs.</p>
+
+		<div id="canvas">
+		</div>
+
+		<div id="examples">
+		</div>
+
+		<div class="clear-both">
+		</div>
+
+		<h2 id="panel2-output">Server Output: <span id="test-result-b">0</span></h2>
+		
+		<div id="buttons">
+			<input type="button" id="reset_image" class="btn" value="Clear Digit"/>
+			<input type="button" id="send" class="btn" value="Recognize Digit"/>
+		</div>
+	</div>
+
+	<div id="footer">
+	</div>
+
+
+
+</div>
+</body>
